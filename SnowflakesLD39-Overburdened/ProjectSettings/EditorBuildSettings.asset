@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Team Logo Scene.unity
+    guid: 0c1f3dd5863b9004d9c51847b091b695
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: aeb601ff8fbae9042a574f216a6b3942
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 930c1feba2e71cf4783912663e467120
