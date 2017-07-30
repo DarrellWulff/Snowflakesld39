@@ -7,6 +7,8 @@ public class MainMenuScript : MonoBehaviour {
 
     public string nextScene;
     public int secondTransition;
+
+    public NPC enterGameText;
     
 
 	// Use this for initialization
@@ -16,12 +18,20 @@ public class MainMenuScript : MonoBehaviour {
 
         StartCoroutine(sceneChanger());
 
+        //enterGameText.triggerDialogue();
+
+
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        
+        if (!gameObject.GetComponent<Fading>().isInTransition)
+        {
+            //enterGameText.triggerDialogue();
+        }
+    }
 
     public void playGame()
     {

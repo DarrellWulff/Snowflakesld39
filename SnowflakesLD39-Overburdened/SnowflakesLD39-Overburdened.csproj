@@ -83,6 +83,9 @@
     <Compile Include="Assets\Scripts\Scene Transition\Fading.cs" />
     <Compile Include="Assets\Scripts\Scene Transition\TeamLogoSceneChanger.cs" />
     <Compile Include="Assets\Scripts\Systems\CameraMover.cs" />
+    <Compile Include="Assets\Scripts\Systems\Dialogue System\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Systems\Dialogue System\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Systems\Dialogue System\NPC.cs" />
     <Compile Include="Assets\Scripts\Systems\Parallax.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
