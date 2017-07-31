@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class TeamLogoSceneChanger : MonoBehaviour {
 
+    //Player Cursor
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     public string nextScene;
     private int secondTransition = 1;
 
     // Use this for initialization
     void Start ()
     {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
 
         gameObject.GetComponent<Fading>().Fade(false, 3f);
 

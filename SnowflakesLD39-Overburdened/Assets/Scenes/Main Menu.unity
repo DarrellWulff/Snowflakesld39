@@ -1431,6 +1431,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d694f113c46029a418507dbe8000c760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 9fd563d9153fd3a42adfbfa9f381a35d, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   nextScene: Level 1
   secondTransition: 0
   enterGameText: {fileID: 576439209}
