@@ -8,36 +8,36 @@ public class BodyCondition : MonoBehaviour {
     //Code by Darrell Wulff Ludum Dare 39
 
     //Enumerator for runner body condition
-    public enum Condition
+    /*public enum Condition
     {
 
-        Healthy,
-        Stabbed,
-        RightArmLost,
-        LeftArmLost,
-        BothArmsLost,
-        RightLegLost,
-        LeftLegLost,
-        BothLegsLost,
-        RightLegRightArmLost,
-        RightLegLeftArmLost,
-        LeftLegLeftArmLost,
-        LeftLegRightArmLost,
-        RightLegLeftLegRightArmLost,
-        RightLegLeftLegLeftArmLost,
-        AllLost,
+        FrontBroken,
+        RiderBroken,
+        BodyBroken,
+        RearBroken,
+        BatteryStolen,
         Dead
+      
 
-    }
+    }*/
 
-    public Condition bodyCurrentCondition;
+    //Used Bools instead of enums just to get done faster!
+    public bool frontBroken;
+    public bool RiderBroken;
+    public bool BodyBroken;
+    public bool RearBroken;
+    public bool BatteryStolen;
+    public bool Dead;
+
+
+    
 
     // Use this for initialization
     void Start ()
     {
 
         //At start of game body condition is healthy
-        bodyCurrentCondition = Condition.Healthy;
+        
 
 
 		
@@ -49,42 +49,7 @@ public class BodyCondition : MonoBehaviour {
 		
 	}
 
-    public void changeBodyCondition(Condition newCondition)
-    {
-        switch (newCondition)
-        {
-            case Condition.Stabbed:
-                break;
-            case Condition.RightArmLost:
-                break;
-            case Condition.LeftArmLost:
-                break;
-            case Condition.BothArmsLost:
-                break;
-            case Condition.RightLegLost:
-                break;
-            case Condition.LeftLegLost:
-                break;
-            case Condition.BothLegsLost:
-                break;
-            case Condition.RightLegRightArmLost:
-                break;
-            case Condition.RightLegLeftArmLost:
-                break;
-            case Condition.LeftLegLeftArmLost:
-                break;
-            case Condition.LeftLegRightArmLost:
-                break;
-            case Condition.RightLegLeftLegRightArmLost:
-                break;
-            case Condition.RightLegLeftLegLeftArmLost:
-                break;
-            case Condition.AllLost:
-                break;
-            case Condition.Dead:
-                break;
-        }
-    }
+    
 }
 
 

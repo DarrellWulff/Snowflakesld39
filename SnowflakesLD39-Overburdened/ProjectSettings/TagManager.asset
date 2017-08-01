@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Body
+  - Rider
+  - Battery
   layers:
   - Default
   - TransparentFX

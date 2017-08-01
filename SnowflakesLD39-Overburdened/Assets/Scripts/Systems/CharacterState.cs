@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterState : MonoBehaviour {
+public class CharacterState : MonoBehaviour
+{
 
-    //Character's blood amount.
-    private int normalHealth;
-    public int characterHealth;
+    //EnergyBar
+    public Image playerEnergyBar;
+
+    //Character's bike energy amount.
+    private const float NORMALENERGY = 1;
+    public float currentBikeEnergy;
 
     //Refrence our body condition class
     public BodyCondition body;
@@ -15,18 +19,43 @@ public class CharacterState : MonoBehaviour {
     //String to test if the bodycondition enum is working
     public string conCheck;
 
-	// Use this for initialization
-	void Start ()
-    {
-        characterHealth = 100;
+    public bool hasGameStarted;
 
+    // Use this for initialization
+    void Start()
+    {
+        currentBikeEnergy = 1;
+        hasGameStarted = true;
         body = GetComponent<BodyCondition>();
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        conCheck = body.bodyCurrentCondition.ToString();
-	}
+        if (hasGameStarted && currentBikeEnergy > 0)
+        {
+            currentBikeEnergy = currentBikeEnergy - (Time.deltaTime / 145f);
+            playerEnergyBar.rectTransform.localScale = new Vector3(1, currentBikeEnergy, 1);
+        }
+
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentBikeEnergy = currentBikeEnergy - damage / 100;
+    }
+
+    public void RestoreEnergy()
+    {
+        currentBikeEnergy = NORMALENERGY;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Battery")
+        {
+            RestoreEnergy();
+        }
+    }
 }

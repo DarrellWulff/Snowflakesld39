@@ -10,6 +10,9 @@ public class AI : MonoBehaviour {
 
     //Check if the game has started will be accessed by other scripts
     public bool hasGameStarted;
+    public bool startRunning;
+    public bool inCombat;
+    public bool isDestroyed;
 
     //AI rigidbody based movement;
     public Rigidbody2D aiMovement;
@@ -21,6 +24,10 @@ public class AI : MonoBehaviour {
     public string bodCheck;
 
     private Animator anim;
+
+
+
+    public BikeHealth bike;
 
     //Enumerator for the AI state machine
     public enum AIBaseState
@@ -42,23 +49,38 @@ public class AI : MonoBehaviour {
         aiMovement = GetComponent<Rigidbody2D>();
 
         aiBody = GetComponent<BodyCondition>();
-        bodCheck = aiBody.bodyCurrentCondition.ToString();
+        
 
         anim = GetComponent<Animator>();
+
+        bike = GetComponent<BikeHealth>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
+        
+        
 	}
 
     private void FixedUpdate()
     {
-        if (hasGameStarted)
+        if (hasGameStarted && bike.bikeHealth >= 0)
         {
             moveVelocityX = moveSpeed * Time.deltaTime;
             GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, GetComponent<Rigidbody2D>().velocity.y);
         }
+
+        
     }
+
+    /*private void OnMouseOver()
+    {
+        Debug.Log(gameObject.name);
+    }*/
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        bike.bikeHealth -= 1;
+    }*/
 }

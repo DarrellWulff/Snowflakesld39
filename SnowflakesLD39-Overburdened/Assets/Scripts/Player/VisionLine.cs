@@ -9,7 +9,10 @@ public class VisionLine : MonoBehaviour {
     public Camera cam;
 
     //public TrailRenderer trail;
-    
+
+    public Transform line2;
+    //public Transform line3;
+
     public Vector3 cursorPosition;
     public Vector3 mouseWorld;
 	// Use this for initialization
@@ -28,7 +31,9 @@ public class VisionLine : MonoBehaviour {
         cursorPosition = Input.mousePosition;
         mouseWorld = cam.ScreenToWorldPoint(cursorPosition);
         line.SetPosition(0, gameObject.transform.position);
-        line.SetPosition(1, mouseWorld);
+        line.SetPosition(1, line2.position);
         
+        line.SetPosition(2, mouseWorld);
+
     }
 }

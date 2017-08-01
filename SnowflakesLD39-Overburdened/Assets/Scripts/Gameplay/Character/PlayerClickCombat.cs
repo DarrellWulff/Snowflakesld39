@@ -8,17 +8,59 @@ public class PlayerClickCombat : MonoBehaviour {
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
+
+    public string raytest;
+
+    public Vector3 cursorPosition;
+
+    public ParticleSystem bulletShot;
+    public GameObject emitPostion;
+    public Vector3 mouseWorld;
+
+    public Camera cam;
+
+    public Ray ray;
+
+    public CharacterState thePlayer;
     
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-	}
+
+        cam = Camera.main;
+
+        thePlayer = GetComponent<CharacterState>();
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+        cursorPosition = Input.mousePosition;
+
+        mouseWorld = new Vector3(cam.ScreenToWorldPoint(cursorPosition).x, cam.ScreenToWorldPoint(cursorPosition).y, cam.ScreenToWorldPoint(cursorPosition).z + 3);
+
+        ray = cam.ScreenPointToRay(cursorPosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+        if (hit != null && hit.collider != null)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+
+                bulletShot.transform.position = mouseWorld;
+                bulletShot.Emit(30);
+                thePlayer.TakeDamage(4);
+                if (hit.collider.name.Equals("AIPlayer")) { hit.collider.gameObject.GetComponent<BikeHealth>().damageBike(); }
+                
+                //bulletShot.transform.position = gameObject.transform.parent.position;
+                //Instantiate(bulletShot, cursorPosition, Quaternion.identity);
+
+            }
+        }
+    }
+
+    
 }
