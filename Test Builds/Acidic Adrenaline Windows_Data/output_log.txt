@@ -1,0 +1,41 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 680 (ID=0x1180)
+    Vendor:   NVIDIA
+    VRAM:     2017 MB
+    Driver:   21.21.13.7866
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Darrell Wulff\Documents\GitHub\Snowflakesld39\Test Builds\Acidic Adrenaline Windows_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.241 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.280748 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.447667 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 447.
+Total: 0.772474 ms (FindLiveObjects: 0.055909 ms CreateObjectMapping: 0.030519 ms MarkObjects: 0.582176 ms  DeleteObjects: 0.102586 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.959140 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1958.
+Total: 0.980211 ms (FindLiveObjects: 0.136439 ms CreateObjectMapping: 0.034622 ms MarkObjects: 0.763498 ms  DeleteObjects: 0.044368 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 150c -> priority: 1 
+  Thread -> id: 37c4 -> priority: 1 

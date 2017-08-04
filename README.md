@@ -2,4 +2,6 @@
 
 **Ludum Dare 39 Game**
 
-**By:** *Jordan Dennings, Darrell Wulff, Jon Wulff*
+**By:** *Darrell Wulff, Jon Wulff*
+
+![alt text](https://github.com/DarrellWulff/Snowflakesld39/ART LOL/Darrells Pixel Art/GAME.png)

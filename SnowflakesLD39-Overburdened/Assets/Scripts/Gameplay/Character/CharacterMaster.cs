@@ -11,9 +11,9 @@ public class CharacterMaster : MonoBehaviour {
     public Image GameOver;
     public Image YouWon;
 
-    public float gameTime;
-    public Text gameTimeText;
-    public Text timeUpdate;
+    //public float gameTime;
+    //public Text gameTimeText;
+    //public Text timeUpdate;
 
 	// Use this for initialization
 	void Start ()
@@ -35,14 +35,14 @@ public class CharacterMaster : MonoBehaviour {
         if (thePlayer.currentBikeEnergy <= 0)
         {
             thePlayer.gameObject.SetActive(false);
-            GameOver.enabled = true;
-            Time.timeScale = 0;
+            GameOver.gameObject.SetActive(true);
+            //Time.timeScale = 0;
         }
 
         if (thePlayer.transform.position.x >= 88)
         {
             YouWon.enabled = true;
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
 	}
 

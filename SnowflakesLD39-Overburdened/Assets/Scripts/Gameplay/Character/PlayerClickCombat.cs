@@ -41,6 +41,7 @@ public class PlayerClickCombat : MonoBehaviour {
         cursorPosition = Input.mousePosition;
 
         mouseWorld = new Vector3(cam.ScreenToWorldPoint(cursorPosition).x, cam.ScreenToWorldPoint(cursorPosition).y, cam.ScreenToWorldPoint(cursorPosition).z + 3);
+        bulletShot.transform.position = mouseWorld;
 
         ray = cam.ScreenPointToRay(cursorPosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);

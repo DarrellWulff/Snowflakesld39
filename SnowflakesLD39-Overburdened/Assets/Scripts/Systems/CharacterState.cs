@@ -58,4 +58,12 @@ public class CharacterState : MonoBehaviour
             RestoreEnergy();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Battery")
+        {
+            RestoreEnergy();
+        }
+    }
 }
