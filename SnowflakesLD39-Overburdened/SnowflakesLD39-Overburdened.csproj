@@ -124,8 +124,10 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\Scripts\AI\AI.cs" />
-    <Compile Include="Assets\Scripts\AI\AIMASTER.cs" />
+    <Compile Include="Assets\Scripts\AI\Bikers\AI.cs" />
+    <Compile Include="Assets\Scripts\AI\Bikers\AIMASTER.cs" />
+    <Compile Include="Assets\Scripts\AI\Bikers\BatteryHealth.cs" />
+    <Compile Include="Assets\Scripts\AI\Bikers\RiderHealth.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Audio\MenuMusic.cs" />
     <Compile Include="Assets\Scripts\BatteryPower.cs" />

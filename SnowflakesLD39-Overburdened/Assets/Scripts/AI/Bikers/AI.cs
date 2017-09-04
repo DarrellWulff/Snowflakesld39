@@ -25,9 +25,11 @@ public class AI : MonoBehaviour {
 
     private Animator anim;
 
-
-
     public BikeHealth bike;
+
+    //Check if player is in range of enemy bike
+    public PlyCheck checkForPlayer;
+    public bool inRangeCheck;
 
     //Enumerator for the AI state machine
     public enum AIBaseState
@@ -54,6 +56,8 @@ public class AI : MonoBehaviour {
         anim = GetComponent<Animator>();
 
         bike = GetComponent<BikeHealth>();
+
+        inRangeCheck = checkForPlayer.playCheck;
     }
 	
 	// Update is called once per frame
@@ -65,12 +69,20 @@ public class AI : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        inRangeCheck = checkForPlayer.playCheck;
+
         if (hasGameStarted && bike.bikeHealth >= 0)
         {
             moveVelocityX = moveSpeed * Time.deltaTime;
             GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, GetComponent<Rigidbody2D>().velocity.y);
         }
 
+        if (inRangeCheck && bike.bikeHealth >= 0)
+        {
+            hasGameStarted = false;
+            moveVelocityX = 72 * Time.deltaTime;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, GetComponent<Rigidbody2D>().velocity.y);
+        }
         
     }
 

@@ -846,6 +846,7 @@ GameObject:
   - component: {fileID: 115766265}
   - component: {fileID: 115766266}
   - component: {fileID: 115766267}
+  - component: {fileID: 115766268}
   m_Layer: 0
   m_Name: CheckForPlayer
   m_TagString: Untagged
@@ -860,7 +861,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 115766264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -25.72, y: -169.591, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1469478016}
@@ -916,6 +917,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &115766268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115766264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463ffffd68ec5874985b9a02d0fafdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playCheck: 0
 --- !u!1001 &118588000
 Prefab:
   m_ObjectHideFlags: 0
@@ -1740,7 +1753,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 105195940
+  randomSeed: 1087543259
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5605,6 +5618,8 @@ GameObject:
   - component: {fileID: 286720995}
   - component: {fileID: 286720997}
   - component: {fileID: 286720996}
+  - component: {fileID: 286720999}
+  - component: {fileID: 286720998}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Battery
@@ -5692,6 +5707,36 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &286720998
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286720994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &286720999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286720994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62f0ea9b58e41a4a929c9a563c46832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHightlighted: 0
+  batteryHealth: 2
 --- !u!1 &301100043
 GameObject:
   m_ObjectHideFlags: 0
@@ -7092,7 +7137,7 @@ RectTransform:
   - {fileID: 941952515}
   - {fileID: 513868710}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7308,7 +7353,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1814171168
+  randomSeed: -1873884308
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10712,7 +10757,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593543319
 GameObject:
@@ -16461,6 +16506,8 @@ GameObject:
   - component: {fileID: 822977741}
   - component: {fileID: 822977743}
   - component: {fileID: 822977742}
+  - component: {fileID: 822977745}
+  - component: {fileID: 822977744}
   m_Layer: 0
   m_Name: Rider
   m_TagString: Rider
@@ -16475,7 +16522,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 822977740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.018, z: -0.48}
+  m_LocalPosition: {x: 0, y: 0.01, z: -0.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1334760348}
@@ -16548,6 +16595,36 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &822977744
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822977740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &822977745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822977740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc9592be05371d49b9be999321c1147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHightlighted: 0
+  riderHealth: 1
 --- !u!4 &838862500 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4812869661384300, guid: 237272ac3dd029748a6b02e0ab3fb713,
@@ -25570,34 +25647,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &1193394612
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1193394613}
-  m_Layer: 0
-  m_Name: CursorLogic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1193394613
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1193394612}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.58000004, y: -4.21, z: -2.89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211702963
 GameObject:
   m_ObjectHideFlags: 0
@@ -27084,6 +27133,8 @@ MonoBehaviour:
   aiBody: {fileID: 0}
   bodCheck: 
   bike: {fileID: 0}
+  checkForPlayer: {fileID: 115766268}
+  inRangeCheck: 0
 --- !u!4 &1334760348
 Transform:
   m_ObjectHideFlags: 0
@@ -34137,7 +34188,7 @@ Transform:
   - {fileID: 1748046436}
   - {fileID: 378641628}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1781797037
 SpriteRenderer:
@@ -34312,10 +34363,11 @@ MonoBehaviour:
   raytest: 
   cursorPosition: {x: 0, y: 0, z: 0}
   bulletShot: {fileID: 1216100118}
-  emitPostion: {fileID: 1193394612}
+  emitPostion: {fileID: 0}
   mouseWorld: {x: 0, y: 0, z: 0}
   cam: {fileID: 0}
   thePlayer: {fileID: 0}
+  targetHit: 0
 --- !u!61 &1781797045
 BoxCollider2D:
   m_ObjectHideFlags: 0
